@@ -1,13 +1,16 @@
-require("./node_modules/bootstrap/dist/css/bootstrap.min.css")
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-export class App extends React.Component {
+import Articles from './app/Articles';
+
+export default class CanulApp extends React.Component {
 	render() {
 		return (
-			<div>Simple React + Babel + Bootstrap + Webpack</div>
+			<div>
+				<Articles></Articles>
+			</div>
 		);
 	}
 }
 
-ReactDOM.render(<App/>, document.querySelector("#myApp"));
+ReactDOM.render(<CanulApp />, document.getElementById('canul'));

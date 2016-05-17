@@ -1,0 +1,118 @@
+
+* { box-sizing: border-box; }
+
+@font-face {
+  font-family:'Questa Regular';
+  src:url('../fonts/questa-regular.woff');
+}
+
+@font-face {
+  font-family:'Questa Sans';
+  src:url('../fonts/questa-sans.woff');
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Questa Regular';
+}
+p {
+   line-height: 1.75rem;
+}
+
+time, button {
+  font-family: 'Questa Sans';
+}
+
+
+body { max-width:720px; margin: 0 auto; }
+
+article.article {
+  position: relative;
+  display:flex;
+  flex-direction: column;
+}
+.article + * { margin: 1em 0 0 0; }
+
+.article > * { padding: 1rem; }
+
+.article > header.article-header {
+  display:flex;
+  justify-content: space-between;
+  background: #222;
+}
+
+.article-header > * {
+  line-height: 2rem;
+  color: #EEE;
+}
+
+.article-header > h1.article-title {
+  margin:0;
+  font-weight: normal;
+  font-size: 1.25rem;
+}
+.article-header > div.article-signature {
+  font-family: -apple-system;
+  font-size: .75rem;
+}
+
+.article > div.article-body { text-align: justify; }
+
+.article > footer.article-footer {
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.article-footer  > * + * { margin-left : .5rem; }
+.article-footer button {
+  line-height: 1rem;
+  font-size: .75rem;
+  margin: 0;
+  padding: 0 .5rem;
+  height: 2rem;
+  border-radius: .2rem;
+  border: 1px solid #222;
+  background: transparent;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+
+button:hover {
+  background: #222;
+  color: #EEE;
+}
+
+button.poop-button { font-size: 1.5rem; }
+
+.poop-holder {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 0 .5rem;
+}
+.poop-holder > * + * { padding-right: .5rem; }
+
+.poop-holder .poop-feedback {
+  line-height: 2rem;
+  font-size: .75rem;
+  font-family: -apple-system;
+  opacity: .3;
+}
+
+article > picture.article-picture {
+  padding: 0;
+  margin: 0;
+  max-width:720px;
+  width:100%;
+  overflow:hidden;
+  display: flex;
+  align-items: center;
+}
+picture.article-picture > img {
+  margin: 0;
+  padding: 0;
+
+}
