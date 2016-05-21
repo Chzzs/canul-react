@@ -15,7 +15,9 @@ p, h1, h2, h3, h4, h5, h6 {
   font-family: 'Questa Regular';
 }
 p {
-   line-height: 1.75rem;
+    font-size: 1.3rem;
+    color: #222;
+    line-height: 1.75;
 }
 
 time, button {
@@ -37,7 +39,10 @@ article.article {
 .article > header.article-header {
   display:flex;
   justify-content: space-between;
+  flex-direction: column;
   background: #222;
+  display: flex;
+
 }
 
 .article-header > * {
@@ -48,12 +53,21 @@ article.article {
 .article-header > h1.article-title {
   margin:0;
   font-weight: normal;
-  font-size: 1.25rem;
+  font-size: 2.25rem;
+  line-height: 1.75;
+  font-family: 'Questa Sans';
 }
+
 .article-header > div.article-signature {
-  font-family: -apple-system;
+  font-family: 'Questa Sans';
   font-size: .75rem;
+  flex: 1;
+  text-align: right;
+  display:flex;
+  flex-direction: column;
+  align-self: flex-end;
 }
+
 
 .article > div.article-body { text-align: justify; }
 

@@ -7582,7 +7582,6 @@
 	Object.defineProperty(exports, "__esModule", {
 		value: true
 	});
-	exports.App = undefined;
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
@@ -7606,30 +7605,33 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var App = exports.App = function (_React$Component) {
-		_inherits(App, _React$Component);
+	var CanulApp = function (_React$Component) {
+		_inherits(CanulApp, _React$Component);
 	
-		function App() {
-			_classCallCheck(this, App);
+		function CanulApp() {
+			_classCallCheck(this, CanulApp);
 	
-			return _possibleConstructorReturn(this, Object.getPrototypeOf(App).apply(this, arguments));
+			return _possibleConstructorReturn(this, Object.getPrototypeOf(CanulApp).apply(this, arguments));
 		}
 	
-		_createClass(App, [{
+		_createClass(CanulApp, [{
 			key: 'render',
 			value: function render() {
 				return _react2.default.createElement(
-					'div',
+					'p',
 					null,
 					_react2.default.createElement(_Articles2.default, null)
 				);
 			}
 		}]);
 	
-		return App;
+		return CanulApp;
 	}(_react2.default.Component);
 	
-	_reactDom2.default.render(_react2.default.createElement(App, null), document.querySelector("#myApp"));
+	exports.default = CanulApp;
+	
+	
+	_reactDom2.default.render(_react2.default.createElement(CanulApp, null), document.getElementById('app'));
 	
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/Chazz/Projects/react/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "index.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
@@ -27691,7 +27693,14 @@
 	          this._getSignature()
 	        ),
 	        _react2.default.createElement(
-	          "div",
+	          "picture",
+	          { className: "article-picture" },
+	          _react2.default.createElement("source", { srcSet: "http://lorempicsum.com/futurama/320/272/1", media: "(max-width: 320px)" }),
+	          _react2.default.createElement("source", { srcSet: "http://lorempicsum.com/futurama/640/272/2", media: "(max-width: 640px)" }),
+	          _react2.default.createElement("img", { src: "http://lorempicsum.com/futurama/720/272/3", alt: "profile" })
+	        ),
+	        _react2.default.createElement(
+	          "main",
 	          { className: "article-body" },
 	          _react2.default.createElement(
 	            "p",

@@ -1,0 +1,44 @@
+//- article/footer.scss
+
+@import "styles/config";
+@import "styles/button";
+
+article > footer {
+
+    position :relative;
+    color: $black;
+    padding: .5*$baseline $padding;
+    display: flex;
+    flex-direction: row-reverse;
+
+    &:before {
+      position: absolute;
+      top: 0;
+      content :'';
+      display: block;
+      height: 1px;
+      width: 50%;
+      left: 25%;
+      background: $black;
+    }
+
+    & > * + * {
+      margin-right: 1rem;
+    }
+
+    & > .poop-holder {
+      display: flex;
+      flex-direction: row-reverse;
+
+      & > * + * {
+        margin-right: 1rem;
+      }
+
+      & > .poop-feedback {
+        line-height: $baseline;
+        color: $gray;
+        font-family: 'Questa Sans';
+        font-size : .75*$font-size;
+      }
+    }
+  }

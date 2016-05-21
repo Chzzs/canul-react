@@ -1,0 +1,25 @@
+//- article/header.scss
+
+@import "styles/config";
+
+article > header {
+    background: transparent;
+    color: $black;
+    padding: .5*$baseline $padding;
+    display: flex;
+    flex-direction: column;
+    & > * + * {
+      margin-top: .5*$baseline;
+    }
+    & > .article-signature {
+      align-self: flex-end;
+      color: $gray;
+      line-height: $baseline;
+      font-family: 'Questa Sans';
+      & > * + * {
+        &:before {
+          content: '\2004•\2004';
+        }
+      }
+    }
+  }

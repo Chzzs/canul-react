@@ -1,0 +1,29 @@
+@import "styles/rhythm";
+@import "styles/fonts";
+
+html { padding-top: $baseline; background: darken($white, 2%); color: $black; }
+
+* { box-sizing: border-box;}
+
+@media screen and (max-width: 50rem) {
+  body {padding: 0 .5*$padding;}  
+}
+
+body {
+  max-width: 50rem;
+  margin: 0 auto;
+
+}
+
+h1 {
+  margin:0;
+  padding: 0;
+  font-family: 'Questa Sans';
+  font-weight: normal;
+}
+p {
+  margin: 0;
+  padding: 0;
+  font-family: 'Questa Regular'; }
+
+p + * {  margin-top: $baseline; }

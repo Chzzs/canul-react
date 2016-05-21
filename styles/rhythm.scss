@@ -1,0 +1,12 @@
+//- rhythm.scss
+
+@import "styles/config";
+
+h1 {
+  line-height: 1 * $baseline;
+  font-size: 1.33 * $font-size;
+}
+p {
+  line-height: $baseline;
+  font-size: $font-size;
+}

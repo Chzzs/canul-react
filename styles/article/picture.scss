@@ -1,0 +1,10 @@
+//- article/header.scss
+
+@import "styles/config";
+
+article > picture {
+  background: red;
+  padding: 0;
+  margin: 0;
+  height: 8 * $baseline;
+}

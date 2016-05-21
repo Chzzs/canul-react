@@ -1,0 +1,17 @@
+//- article/article.scss
+
+@import "styles/config";
+
+@import "styles/article/header.scss";
+@import "styles/article/picture.scss";
+@import "styles/article/main.scss";
+@import "styles/article/footer.scss";
+
+article {
+
+  background: $white;
+  border-radius: .33rem;
+  box-shadow: 0 .12rem .66rem -.66rem $black;
+  overflow: hidden;
+  & + * { margin-top: $baseline; }
+}

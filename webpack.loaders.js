@@ -1,10 +1,16 @@
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+
 module.exports = [
 	{
 		test: /\.jsx?$/,
 		exclude: /(node_modules|bower_components)/,
 		loaders: ['react-hot', 'babel'],
 	},
-
+	{
+		test:/\.scss$/,
+		loader: ExtractTextPlugin.extract('css!sass')
+	},
 	{
 		test: /\.css$/,
 		loader: 'style-loader!css-loader'

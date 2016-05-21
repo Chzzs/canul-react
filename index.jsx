@@ -1,7 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import './styles/layout.scss';
+
+
 import Articles from './app/Articles';
+
 
 export default class CanulApp extends React.Component {
 	render() {
@@ -13,4 +17,4 @@ export default class CanulApp extends React.Component {
 	}
 }
 
-ReactDOM.render(<CanulApp />, document.getElementById('canul'));
+ReactDOM.render(<CanulApp />, document.getElementById('app'));

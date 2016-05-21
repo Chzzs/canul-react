@@ -1,0 +1,16 @@
+//- article/main.scss
+
+@import "styles/config";
+
+article > main {
+  margin: $baseline 0;
+  padding: 0 $padding;
+  max-height: 3*$baseline;
+  overflow:hidden;
+  text-overflow: ellipsis;
+  line-height: $baseline;
+  font-size: $font-size;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
