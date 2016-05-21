@@ -30,15 +30,21 @@ article > footer {
       display: flex;
       flex-direction: row-reverse;
 
-      & > * + * {
-        margin-right: 1rem;
-      }
-
       & > .poop-feedback {
         line-height: $baseline;
         color: $gray;
+        opacity: 0;
+        margin-top: -1rem;
+
+        margin-right: 1rem;
         font-family: 'Questa Sans';
         font-size : .75*$font-size;
+        transition: all ease-out 150ms;
+      }
+      & > .poop-feedback.fade {
+        opacity: 1;
+        margin-top: 0rem;
+        transition: all ease-out 130ms;
       }
     }
   }

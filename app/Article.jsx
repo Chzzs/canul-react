@@ -1,12 +1,18 @@
 import React from 'react';
 import '../styles/article/article.scss';
 
+const FEEDBACK_MESSAGES = ['Merci !😃','😘','#Lourd 😍','😚','Cool 👍', 'Ouaahou 😄', 'Thx ! 🤗' ];
 
 export default class Article extends React.Component {
+
 
   constructor() {
     super();
     this.author= "Le Canul";
+    this.state = {
+        clicked : false
+    ,   message : ''
+    }
   }
 
   _getSignature() {
@@ -16,6 +22,34 @@ export default class Article extends React.Component {
         <span className="article-author">{this.props.author}</span>
       </div>
     );
+  }
+
+  _getRandomFeedbackMessage() {
+    let index =  Math.floor(Math.random()* FEEDBACK_MESSAGES.length);
+    return (this.state.clicked) ? '' : FEEDBACK_MESSAGES[index] ;
+  }
+
+  _handlePoop(e) {
+    e.preventDefault();
+
+    this.setState({
+      clicked: !this.state.clicked
+    , message: this._getRandomFeedbackMessage()
+    , timeout: true
+    });
+
+    setTimeout(() => {
+      this.setState({message: '', timeout: false});
+    }, 2000);
+
+  }
+
+
+  _getButtonClassName() {
+    return (this.state.clicked) ? 'poop-icon active' : 'poop-icon';
+  }
+  _getFeedbackClassName() {
+    return (this.state.timeout) ? 'poop-feedback fade' : 'poop-feedback';
   }
 
 
@@ -41,19 +75,11 @@ export default class Article extends React.Component {
             <button className="readmore-button">Lire la suite &rarr;</button>
           </div>
           <div className="poop-holder">
-            <button className="poop-button">💩</button>
-            <div className="poop-feedback">feedback</div>
+            <button onClick={this._handlePoop.bind(this)} className={this._getButtonClassName()} >💩</button>
+            <div className={this._getFeedbackClassName()}>{this.state.message}</div>
           </div>
         </footer>
       </article>
 		);
 	}
 }
-
-/*
-<picture className="article-picture">
-  <source srcSet="http://lorempicsum.com/futurama/320/272/1" media="(max-width: 320px)"/>
-  <source srcSet="http://lorempicsum.com/futurama/640/272/2" media="(max-width: 640px)"/>
-  <img src="http://lorempicsum.com/futurama/720/272/3" alt="profile"/>
-</picture>
-*/
